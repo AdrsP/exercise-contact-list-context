@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import {Context} from "../store/appContext.js"
+
 
 export const AddContact = () => {
+
+	const {actions, store} = useContext(Context);
+
+	function saveContact (){
+		actions.agregarContacto(/*meter use states de tlf, direccion, etc*/)
+	}
+
+// realizar un map con el store store.contact.map(...)
+
 	return (
 		<div className="container">
 			<div>

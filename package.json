@@ -72,6 +72,7 @@
 		]
 	},
 	"dependencies": {
+		"node-sass": "^7.0.1",
 		"bootstrap": "^4.4.1",
 		"prop-types": "^15.7.2",
 		"react": "^16.13.1",
