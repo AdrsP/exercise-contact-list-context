@@ -11,17 +11,16 @@ export const AddContact = () => {
 	const [inputPhone, setInputPhone] = useState("");
 	const [inputAddress, setInputAddres] = useState("");
 	// fucion para usar en el boton save
+
 	function saveContact() {
 		actions.agregarContacto(inputName, inputEmail, inputPhone, inputAddress);
 		setInputName("");
 		setInputEmail("");
 		setInputPhone("");
 		setInputAddres("");
-		actions.actualizarContactStore();
 	}
 
-	// realizar un map con el store store.contact.map(...)
-
+	// realizar un map con el store store.contact.map(...) esto en la vista contatcs
 	return (
 		<div className="container">
 			<div>
@@ -67,7 +66,7 @@ export const AddContact = () => {
 							onChange={e => setInputAddres(e.target.value)}
 						/>
 					</div>
-					<button type="button" className="btn btn-primary form-control" onClick={saveContact()}>
+					<button type="button" className="btn btn-primary form-control" onClick={saveContact}>
 						save
 					</button>
 					<Link className="mt-3 w-100 text-center" to="/">
